@@ -68,5 +68,20 @@ Q. What Migration do?
 will reflect changes in table in db
 - if we make any changes in model  then it will reflect changes in javascript level
 
-Q How to update migration 
+Q.How to update migration 
 - first undo then migrate
+
+
+Q.why need City Repository?
+- To Perform CRUD operations on Model
+
+Q.why need City Service?
+- after written CRUD in method let say we want add some bussiness logic
+
+
+Q. In Service Repo created constructor not  created cityRepo
+- these are two different way 
+- we can use constructor or remove constructor  
+
+
+
