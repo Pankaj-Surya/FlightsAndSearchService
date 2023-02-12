@@ -134,3 +134,13 @@ const ap =await city.getAirports()
 
 
 # Q.Add multiple cities in bulk ?
+
+======================================
+Lec 6 : Implementing Airplane  Models 
+======================================
+
+# Created Airplane Model and Migration
+Command : npx sequelize model:generate --name Airplane --attributes modelNumber:String,capacity:integer
+
+# Added seed for add Planes
+Command : npx sequelize seed:generate --name add-airplanes
