@@ -48,8 +48,9 @@ const destroy = async (req,res)=>{
 // Patch -> /city/:id -> req.body
 const update = async (req,res)=>{
     try {
-        console.log("id => ",req.params.id)
+        //console.log("id => ",req.params.id)
         const city = await cityService.updateCity(req.params.id,req.body)
+        
         return res.status(200).json({
             data: city,
             success:true,
@@ -69,7 +70,6 @@ const update = async (req,res)=>{
 
 // GET -> /city/:id
 const get = async (req,res)=>{
-    console.log("hello world")
     try {
         console.log("id => ",req.params)
         const city = await cityService.getCity(req.params.id)
@@ -91,6 +91,29 @@ const get = async (req,res)=>{
     }
 }
 
+
+
+// GET All-> /city/
+const getAll = async (req,res)=>{
+    try {
+        const cities = await cityService.getAllCity(req.query)
+        //console.log(city)
+        return res.status(200).json({
+            data: cities,
+            success:true,
+            message: 'City get successfully',
+            err:{}
+        }); 
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({
+            data:{},
+            success:false,
+            message:"not able to getAll a cities",
+            err:error
+        })
+    }
+}
 module.exports={
-    create,update,destroy,get
+    create,update,destroy,get,getAll
 }

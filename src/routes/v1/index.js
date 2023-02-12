@@ -8,7 +8,7 @@ router.post('/city',cityController.create)
 router.get('/city/:id',cityController.get)
 router.delete('/city/:id',cityController.destroy)
 router.put('/city/:id',cityController.update)
-
+router.get('/city',cityController.getAll)
 
 
 module.exports=router
