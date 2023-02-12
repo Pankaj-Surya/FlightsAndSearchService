@@ -79,14 +79,14 @@ Q.why need City Service?
 - after written CRUD in method let say we want add some bussiness logic
 
 
-Q. In Service Repo created constructor not  created cityRepo
+# Q. In Service Repo created constructor not  created cityRepo
 - these are two different way 
 - we can use constructor or remove constructor  
 
-Q.How to make Association?
+# Q.How to make Association?
   Relationship -> City has many airports and Airport belongs to a city (one to many)
-1.create model ->  sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
-2.setup association in models
+1. create model ->  sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
+2. setup association in models
   2.1 in airpots model
        Association -> this.belongsTo(models.City, {
         foreignKey: "cityId",
@@ -94,7 +94,7 @@ Q.How to make Association?
       })
   2.2 in city model
       Association-> this.hasMany(models.Airport,{foreignKey:"cityId"})
-3.changes in migration
+3. changes in migration
    cityId: {
         type: Sequelize.INTEGER,
         onDelete:"CASCADE",
@@ -104,6 +104,12 @@ Q.How to make Association?
           as:"cityId"
         },
         allowNull: false,
-4.
+
+
+Q.What is seeder 
+Seed the value in Airports
+1. Command : npx sequelixe seed:generate --name add-airports
+2.         add values in Airports
+3.       : npx sequelixe db:seed:all
 
 
