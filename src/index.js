@@ -18,16 +18,10 @@ const setupAndStartServer = async ()=>{
     app.listen(PORT,async ()=>{
         console.log(`Server start at ${PORT}`);
         
-        if(process.env.SYNC_DB){
-            db.sequelize.sync({alter:true})
-        }
+        // if(process.env.SYNC_DB){
+        //     db.sequelize.sync({alter:true})
+        // }
 
-        const city = await City.findOne({where:{
-            id:3,
-        }})
-        const ap =await city.getAirports()
-        //const ap = await City.findByPk(3).getAirports();
-        console.log(ap)
     });
 }
 
