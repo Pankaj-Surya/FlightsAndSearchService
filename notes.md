@@ -106,10 +106,31 @@ Q.why need City Service?
         allowNull: false,
 
 
-Q.What is seeder 
+# Q.What is seeder?
 Seed the value in Airports
 1. Command : npx sequelixe seed:generate --name add-airports
 2.         add values in Airports
 3.       : npx sequelixe db:seed:all
 
+# Q.write a query to get get all cities and airport data based on cityId?
+JOINS
+select * from cities as c join airports as a on a.cityId=c.id where c.id=3;
 
+1. Using include
+const ap = await City.findAll({
+            where:{
+                id:3
+            } 
+            include : [{
+                model:Airport
+            }],
+})
+
+2. Using get
+const city = await City.findOne({where:{
+            id:3,
+        }})
+const ap =await city.getAirports()
+
+
+# Q.Add multiple cities in bulk ?
