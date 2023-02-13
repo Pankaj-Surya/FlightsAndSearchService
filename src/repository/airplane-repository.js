@@ -1,5 +1,5 @@
 const {Airplane} = require("../models/index")
-
+//console.log(Airplane)
 
 class AirplaneRepository {
 

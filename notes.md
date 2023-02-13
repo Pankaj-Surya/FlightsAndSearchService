@@ -144,3 +144,13 @@ Command : npx sequelize model:generate --name Airplane --attributes modelNumber:
 
 # Added seed for add Planes
 Command : npx sequelize seed:generate --name add-airplanes
+
+# Filter Logic
+Requirement : Filter By ArrivalAirport,DepartureAirport,Price , minPrice, maxPrice
+
+
+
+
+======================================
+Lec 7 : Implementing Other Models 
+======================================

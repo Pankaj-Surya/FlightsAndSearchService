@@ -7,6 +7,7 @@ const ApiRoutes = require('./routes/index')
 
 const {Airport,City} = require('../src/models/index')
 const db = require("../src/models/index") 
+
 const setupAndStartServer = async ()=>{
     // create the express object
     const app = express();
