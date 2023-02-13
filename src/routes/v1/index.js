@@ -15,5 +15,6 @@ router.get('/city',cityController.getAll)
 
 // Flight
 router.post('/flights',flightController.create)
+router.get('/flights',flightController.getAll)
 
 module.exports=router
