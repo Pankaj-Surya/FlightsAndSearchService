@@ -1,31 +1,58 @@
-# Configuratation
+# LEC 2 : BOOKING SERVICE
+
+## 🔴 **Configuration**
 1. Setup sever and dotenv 
 2. Seting up seqelize
-     -npx sequelize init => Created "config\config.json"
-     -Go first inside src becoz we have config,json inside src 
-###        npx sequelize db:create
-3. 
+     - `npx sequelize init` => Created "config\config.json"
+     - Go first inside src becoz we have config,json inside src 
+### Command : npx sequelize db:create
+
      
 
-=============================
-Lec 3 : Implementing Models
-==============================
-
-Q1. What is differnce between Flight and airplane?
-->  Flight - src --> dest airplane might be same or different
+# Lec 3 : Implementing Models
 
 
+### **Q1. What is differnce between Flight and airplane ?**
+**Ans** Flight - src --> dest airplane might be same or different
 
-# DB Design 
-# -----------------------  
+
+
+## **🟥 DB Design** 
+ ---
   
- # FlightsSearch_DB  
-  ## Tables
+ ### **🔶 FlightsSearch_DB**
+  ## Tables : 
      1.Airplane
      2.Flight 
      3.Airport 
      4.City
  
+## **City**
+| id | name | Password |
+| :---- | :----: | ----: |
+| Pankaj | Pankaj | 123 |
+| Sam | Sam |  123 |
+
+## **Airport**
+| id | name | address | city_id
+| :---- | :----: | ----: |----: |
+|  1 | Ch. Shivaji M | M | 1 |
+| 2  | Kempagowda |  B |  2
+
+## **Airplane**
+| id | model_number | capacity |
+| :---- | :----: | ----: |
+|  1 | Ch. Shivaji M | 100 |
+| 2  | Kempagowda |  200 |  
+
+
+## **Flights**
+| id | departure_city | des_city_id | city_id | airplane_id |departure| arrival flight_num | airport_id | 
+
+| :---- | :----: | ----: |----: | :---- | :----: | ----: |----: | ----: |
+|  1 | Ch. Shivaji M | M | 1 |
+| 2  | Kempagowda |  B |  2
+
 ### City -> id, name, created_at, updated_at
 ### Airport -> id, name, address, city_id, created_at, updated_at
 ### Airplane -> id,model_number,capacity
@@ -154,3 +181,9 @@ Requirement : Filter By ArrivalAirport,DepartureAirport,Price , minPrice, maxPri
 ======================================
 Lec 7 : Implementing Other Models 
 ======================================
+## Created CRUD Template for Repository and Service
+
+## Added Middleware For Flight
+
+## Created ENUM For Error in util folder
+
