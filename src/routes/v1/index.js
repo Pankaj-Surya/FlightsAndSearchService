@@ -18,7 +18,7 @@ router.get('/city',cityController.getAll)
 router.post('/flights',FlightMiddlewares.validateCreateFlight,flightController.create)
 router.get('/flights',flightController.getAll)
 router.get('/flights/:id',flightController.get)
-
+router.put('/flights/:id',flightController.update)
 //Airport
 router.post('/airports',airportController.create)
 
